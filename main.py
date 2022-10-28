@@ -4,17 +4,17 @@ direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
 text = input("Type your message:\n").lower()
 shift = int(input("Type the shift number:\n"))
 
-def encrypt(text = text, shift = shift):
+def encrypt(regular_text, shift_num):
     original_message = []
-    for letter in text:
+    for letter in regular_text:
         original_message.append(letter)
     encrpyted_message = []
     for i in original_message:
-        if shift + alphabet.index(i) > 25:
-            encrpyted_message.append(alphabet[alphabet.index(i) + shift - 26])
+        if shift_num + alphabet.index(i) > 25:
+            encrpyted_message.append(alphabet[alphabet.index(i) + shift_num - 26])
         else:
-            encrpyted_message.append(alphabet[alphabet.index(i) + shift])
+            encrpyted_message.append(alphabet[alphabet.index(i) + shift_num])
     print(original_message)
     print(encrpyted_message)
 
-encrypt()
+encrypt(text, shift)
