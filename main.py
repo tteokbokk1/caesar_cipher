@@ -14,7 +14,6 @@ def encrypt(regular_text, shift_num):
             encrpyted_message.append(alphabet[alphabet.index(i) + shift_num - 26])
         else:
             encrpyted_message.append(alphabet[alphabet.index(i) + shift_num])
-    print(original_message)
-    print(encrpyted_message)
+    print(f"Your encrypted text is {''.join(encrpyted_message)}")
 
 encrypt(text, shift)
